@@ -42,3 +42,9 @@ Thumbs.db
 *.sass-cache*
 node_modules
 /.idea
+.next/
+
+# Ignore Webpack hot update files
+*.hot-update.js
+*.hot-update.json
+*.hot-update.js.map
