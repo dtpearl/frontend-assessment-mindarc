@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
       backgroundImage: {
         "hero-background-desktop": "url(https://via.placeholder.com/1920x650)",
         "hero-background-mobile": "url(https://via.placeholder.com/600x600)",
