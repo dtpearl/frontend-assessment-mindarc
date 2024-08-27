@@ -1,10 +1,12 @@
+## Introduction
+
 My name is David Pearl, I'm a full stack web developer with 4.5 years experience.
 
 Thanks for the opportunity to take your assessment.
 
 My experience is with React, so I completed your assessment using Next.js, however am open to learning Vue if that is required for the position.
 
-To answer your question from the R
+To answer your bonus question from the README
 
 `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`
 
