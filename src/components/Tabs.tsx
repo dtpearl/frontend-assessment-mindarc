@@ -13,19 +13,21 @@ export default function Tabs({ content }: TabsProps) {
 
   return (
     <div>
-      <div className="flex border-b">
+      <div className="flex border-b relative">
         {content.map((item, index) => (
-          <button
-            key={`tab-${index}`}
-            className={`flex-1 py-2 px-4 ${
-              activeTab === index
-                ? "bg-white border-l border-t border-r rounded-t-lg"
-                : "bg-gray-200"
-            }`}
-            onClick={() => setActiveTab(index)}
-          >
-            {item.title}
-          </button>
+          <div className="flex flex-col flex-1">
+            <button
+              key={`tab-${index}`}
+              className={`mt-auto py-2 px-4 ${
+                activeTab === index
+                  ? "h-[50px] bg-white border-l border-t border-r rounded-t-lg"
+                  : "h-[40px] bg-gray-200"
+              }`}
+              onClick={() => setActiveTab(index)}
+            >
+              {item.title}
+            </button>
+          </div>
         ))}
       </div>
       <div className="mt-4">

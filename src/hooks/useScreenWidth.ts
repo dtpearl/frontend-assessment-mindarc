@@ -1,13 +1,14 @@
+"use client";
 import { useState, useEffect } from "react";
 
-const useScreenWidth = () => {
-  // const [screenWidth, setScreenWidth] = useState(
-  //   typeof window !== "undefined" ? window.innerWidth : 0
-  // );
-  const [screenWidth, setScreenWidth] = useState(0);
+export const MOBILE_SCREEN_WIDTH = 768;
+
+export const useScreenWidth = () => {
+  const [screenWidth, setScreenWidth] = useState<number | null>(null);
 
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
@@ -16,5 +17,3 @@ const useScreenWidth = () => {
 
   return screenWidth;
 };
-
-export default useScreenWidth;
