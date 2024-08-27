@@ -37,3 +37,11 @@ Using npm:
 or yarn:
 
 `yarn dev`
+
+## After install
+
+The server should be running at [http://localhost:3000](http://localhost:3000)
+
+Exercise 1 should be visible at the root url [here](http://localhost:3000)
+
+Exercise 2 should be visible at `http://localhost:3000/exercise-2` [here](http://localhost:3000/exercise-2)
