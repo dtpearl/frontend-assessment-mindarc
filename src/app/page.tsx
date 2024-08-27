@@ -1,27 +1,11 @@
 "use client";
-import data from "../data/data.json";
-import { useState, useEffect } from "react";
-
-function useWindowWidth() {
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
-
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return windowWidth;
-}
+import useScreenWidth from "@/hooks/useScreenWidth";
+import data from "@/data/data.json";
 
 export default function Home() {
-  const windowWidth = useWindowWidth();
-  const isMobile = windowWidth < 768;
+  const screenWidth = useScreenWidth();
+  const isMobile = screenWidth < 768;
+
   return (
     <div className="bg-white">
       <header
@@ -36,29 +20,29 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {data.map((element) => {
             const elementContent = element.content;
             return (
-              <div
+              <article
                 key={element.title}
-                className="flex flex-col justify-space-between bg-white p-6 rounded shadow"
+                className="flex flex-col items-center bg-white p-6 rounded shadow"
               >
-                <div className="flex-grow flex-col">
+                <div className="flex flex-grow flex-col items-center">
                   <img
                     src="https://via.placeholder.com/400x300"
                     alt="Placeholder"
-                    className="w-[400px] h-[300px] mb-4"
+                    className="w-[400px] h-[300px] mb-4 rounded"
                   />
                   <div
                     dangerouslySetInnerHTML={{ __html: elementContent }}
-                    className="text-black"
+                    className="text-black text-center"
                   />
                 </div>
-                <button className="w[150px] border-2 border-gray-700 rounded-full text-gray-700 font-bold mt-4 mx-auto px-4 py-2 rounded">
+                <button className="w-[150px] border-2 border-gray-700 rounded-full text-gray-700 font-bold mt-4 mx-auto px-4 py-2">
                   READ MORE
                 </button>
-              </div>
+              </article>
             );
           })}
         </div>
