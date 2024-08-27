@@ -38,7 +38,7 @@ or yarn:
 
 `yarn dev`
 
-## After install
+## After install & start
 
 The server should be running at [http://localhost:3000](http://localhost:3000)
 
