@@ -1,40 +1,37 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+My name is David Pearl, I'm a full stack web developer with 4.5 years experience.
 
-Exercise 1
----
-Build a responsive page based on the designs.
+Thanks for the opportunity to take your assessment.
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+My experience is with React, so I completed your assessment using Next.js, however am open to learning Vue if that is required for the position.
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+To answer your question from the R
 
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
+`('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+'b' + 'a' is fine and so is the final 'a'. However, `+ + 'a'` evaluates to NaN because the + operator tries to convert 'a' into a number.
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+When all the elements are concatenated the NaN is converted to a string.
 
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+The expression insided the brackets becomes `('b' + 'a' + 'NaN' + 'a')`, which evaluates to `'baNaNa'`.
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+Calling .toLowerCase() on `'baNaNa'` converts the string to 'banana'.
+
+## Installation
+
+Using npm:
+
+`npm install`
+
+or yarn:
+
+`yarn install`
+
+## Running the Development Server
+
+Using npm:
+
+`npm run dev`
+
+or yarn:
+
+`yarn dev`
